@@ -7,9 +7,7 @@
     <div class="preface group">
       <h2 class="title heading">{{ work.name }}</h2>
       <h3 class="byline heading">
-        <a rel="author" href="#">{{
-          work.author
-        }}</a>
+        <a rel="author" href="#">{{ work.author }}</a>
       </h3>
 
       <div class="summary module" role="complementary">
@@ -64,7 +62,7 @@ export default defineComponent({
       kudos: 90900,
       author: 'idk',
       notes: 'none',
-      paras: "",
+      paras: '',
     },
     key2: {
       name: "Jinchurriki's Brother",

@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div id="app">
-      <ul role="list" v-for="item in objectItems">
+    <div id="app" v-if="this.dataObj">
+      <ul role="list" v-for="item in this.dataObj">
         <li>
           <a href="#" class="block hover:bg-gray-50">
             <div class="px-4 py-4 sm:px-6">
@@ -85,12 +85,13 @@
         </li>
       </ul>
     </div>
+    <div v-else="this.dataObj">No Results</div>
   </main>
 </template>
 <script>
 import { defineComponent } from 'vue';
 
-export default defineComponent({
+export default {
   data: () => ({
     showMenu: false,
     showProfileMenu: false,
@@ -133,6 +134,8 @@ export default defineComponent({
         author: 'gogos14',
       },
     },
+    dataObj: {},
   }),
-});
+  props: ['dataObj'],
+};
 </script>
